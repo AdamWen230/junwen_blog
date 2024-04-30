@@ -83,5 +83,5 @@ ___
   * Joint Team of the School of Computer Science, Software Engineering, and Cyber Security 
   * Starting Shooting Guard
 
-## My Photo 📸
+## A Photo of Me 📸
 ![Cool Guy](/images/junwen.jpg "Captured at Tuna Harbor Park in San Diego, CA, 2019")
