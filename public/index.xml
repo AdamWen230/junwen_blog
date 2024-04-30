@@ -1,9 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Jun Wen&#39;s Blog</title>
-        <link>http://localhost:1313/</link>
-        <description>This is My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 28 Apr 2024 00:00:00 &#43;0000</lastBuildDate>
-            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-        </channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jun Wen&#39;s Blog</title>
+    <link>http://localhost:50351/</link>
+    <description>Recent content on Jun Wen&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 28 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:50351/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>123</title>
+      <link>http://localhost:50351/about/</link>
+      <pubDate>Sun, 28 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:50351/about/</guid>
+      <description>About I am currently a M.S. ECE student at Carnegie Mellon University, with a concentration of computer security.</description>
+    </item>
+  </channel>
 </rss>
