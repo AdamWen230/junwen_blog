@@ -1,6 +1,6 @@
 ---
-title: ""
-date: 2024-04-29
+title: "About"
+date: 2024-04-28
 draft: false
 ---
 
@@ -62,16 +62,15 @@ ___
 ___
 
 ## Activity
-
 #### Teaching
 * TA in 18631 - [Introduction to Information Security](https://www.cylab.cmu.edu/education/course-list/intro-information-security-ece.html)
   * Carnegie Mellon University, Spring 2024
-***
+
 #### Honors
 * Outstanding Presenter, ByteDance Security, 2022
 * First Prize, National College Student Information Security Competition, 2021
 * Southeast University President's Scholarship, 2021
-***
+
 #### Sport
 * [Champion](https://drive.google.com/drive/folders/1AwC6YC_h9ezQ3Aayi4HAFIB1CFwvUjgf?usp=drive_link), 2021 Southeast University Basketball Cup
   * Joint Team of the School of Computer Science, Software Engineering, and Cyber Security 
