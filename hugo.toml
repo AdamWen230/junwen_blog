@@ -259,7 +259,7 @@ theme = "DoIt"
     enable = true
     # Google Analytics
     [params.analytics.google]
-      id = "8114494662"
+      id = "G-4V6S1Y6K7N"
       # whether to anonymize IP
       anonymizeIP = false
 
