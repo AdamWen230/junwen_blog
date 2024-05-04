@@ -1,7 +1,7 @@
 +++
 title = 'Bleeding WebSockets: Unveiling a Broken Access Control Example Happening on Me'
-date = 2024-05-01T10:57:10-04:00
-lastmod = 2024-05-03T21:40:00-04:00
+date = 2024-05-03T22:04:00-04:00
+lastmod = 2024-05-03T22:04:00-04:00
 tags = ['Web Security']
 categories = ['InfoSec']
 draft = false
