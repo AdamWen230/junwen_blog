@@ -255,6 +255,13 @@ theme = "DoIt"
     QQGroup = ""
     Email = "adamwensz@gmail.com"
     RSS = false # DoIt NEW | 0.2.0
+  [params.analytics]
+    enable = false
+    # Google Analytics
+    [params.analytics.google]
+      id = "8114494662"
+      # whether to anonymize IP
+      anonymizeIP = false
 
 [menu]
   [[menu.main]]
