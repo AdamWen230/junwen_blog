@@ -1,7 +1,7 @@
 +++
 title = 'Bleeding WebSockets: Unveiling a Broken Access Control Example Happening on Me'
-date = 2024-05-03T22:04:00-04:00
-lastmod = 2024-05-03T22:04:00-04:00
+date = 2024-05-01T10:57:10-04:00
+lastmod = 2024-05-03T21:40:00-04:00
 tags = ['Web Security']
 categories = ['InfoSec']
 draft = false
@@ -22,7 +22,7 @@ I am taking [18351: Full-Stack Software Development for Engineers](https://cours
 
 As an undergraduate-level course, the schedule is both reasonable and tight, with multiple user stories and project tasks due every week. Most of my time is spent working from the perspective of a software developer. As you may know, when tasks pile up, the focus on security concerns can sometimes be overlooked.
 
-The story began when one of my classmates, Michael (to whom I owe credit for the idea), pointed out a potential  **broken access control vulnerability stemming from the insecure design of the chat room**. This vulnerability was subsequently verified.
+The story began when one of my classmates, **Michael (to whom I owe credit for the idea)**, pointed out a potential  **broken access control vulnerability stemming from the insecure design of the chat room**. This vulnerability was subsequently verified by Prof. Hakan, with the exploit code and fix provided.
 
 I was quite surprised when attempting to reproduce the vulnerability and test the exploit. I found myself questioning why, with a background in security, I had not discovered this during the coding process. It seems to be a common occurrence among developers to overlook or ignore logical vulnerabilities such as broken access control. This oversight has led to broken access control vulnerabilities moving from the fifth position in 2017 to the **top** spot on the OWASP Top 10[^1] list in 2021. According to OWASP, 94% of applications were tested for some form of broken access control, with an average incidence rate of 3.81%.
 
@@ -39,11 +39,21 @@ According to the course policy for 18351, I am not allowed to share any project 
 {{< /admonition >}}
 ___
 
+{{< admonition type=tip title="Acknowledgments" open=true >}}
+* I would like to extend my gratitude to my classmate, Michael Lang, for discovering this security issue. 
+
+* I am also thankful to Professor Hakan Erdogmus for verifying the vulnerability, providing both the exploit details and a fix. 
+
+* Additionally, I appreciate the 18351 course, including the instructors, teaching assistants, and classmates, for providing me with the opportunity to fully engage in full-stack software development. This experience has significantly enriched my understanding and skills in the field.
+{{< /admonition >}}
+
+___
+
 ## Application Architecture
 
 #### Software Technologies
 
-As previously mentioned, the web application is named YACA (Yet Another Chat App), a simple chat web app featuring a local friend list. Some of the software technologies it employs are as follows:
+As previously mentioned, this is a simple chat web application featuring a local friend list. Some of the software technologies it employs are as follows:
 - TypeScript both on the frontend and backend
 - Node.js with Express.js as backend framework and server
 - JWT for token-based authentication
@@ -71,7 +81,7 @@ ___
 
 #### Access Control in Chat Room
 
-The chat room in YACA is designed for authenticated (registered) users to chat with each other. Based on this premise, the following access control strategies need to be enforced:
+The chat room is designed for authenticated (registered) users to chat with each other. Based on this premise, the following access control strategies need to be enforced:
 
 - An unauthenticated user cannot post messages in the chat room.
 - An unauthenticated user cannot read the messages within the chat room.
@@ -174,7 +184,7 @@ In this script, after the DOM content is loaded, the first task is to check if t
 
 The `checkUserLoggedIn` function determines the login status by checking if both a token and username are stored in localStorage. If either is missing, the user is considered not logged in. It then sends a GET request to an API , which checks for user existence in the database and requires a valid JWT token included in the HTTP `Authorization` header.
 
-This API plays a critical role by ensuring that even if a user holds a valid token but already leaves YACA (deletes the account), they cannot access the chat room. A user is considered logged in only if they possess a valid token and exist in the YACA user database.
+This API plays a critical role by ensuring that even if a user holds a valid token but already leaves permanently (deletes the account), they cannot access the chat room. A user is considered logged in only if they possess a valid token and exist in the user database.
 
 ___
 
@@ -245,7 +255,7 @@ An attacker can exploit this vulnerability by establishing a WebSocket connectio
 
 Below are screenshots demonstrating what an authenticated user sees on their frontend and what an attacker can intercept using the exploit script. You can see that all the new chat messages, after the attacker has established the WebSocket connection, are leaked:
 
-![](/images/websocket/user-view.jpg "Authenticated User View")
+![](/images/websocket/user-view.jpg "Authenticated User View (from my implementation)")
 
 ![](/images/websocket/attacker-view.jpg "Attacker View (from course github workspace)")
 
