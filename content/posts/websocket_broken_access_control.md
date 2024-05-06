@@ -34,11 +34,6 @@ In this blog, I will review the application's design, explain the vulnerability 
 
 ___
 
-{{< admonition type=warning title="Course Sharing Policy" open=true >}}
-According to the course policy for 18351, I am not allowed to share any project code in this blog. Therefore, all code snippets within this blog related to the project are pseudocode, and relevant details are described in a more generic way.
-{{< /admonition >}}
-___
-
 {{< admonition type=tip title="Acknowledgments" open=true >}}
 * I would like to extend my gratitude to my classmate, Michael Lang, for discovering this security issue. 
 
