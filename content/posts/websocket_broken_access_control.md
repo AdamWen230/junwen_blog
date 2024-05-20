@@ -6,6 +6,7 @@ tags = ['Web Security']
 categories = ['InfoSec']
 draft = false
 author = 'Jun Wen'
+featuredImagePreview = '/images/websocket/attacker-view.jpg'
 summary = "I am taking 18351: Full-Stack Software Development for Engineers, offered by Prof. Hakan Erdogmus this semester. The course project involves developing a web application named YACA (Yet Another Chat App). This application allows users to register, login, manage a friend list, invite other friends, and engage in group chats."
 +++
 
