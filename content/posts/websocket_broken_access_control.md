@@ -277,50 +277,6 @@ For instance, when broadcasting messages, the server should:
 
 This can be accomplished by using specific `socket.io` APIs that allow targeting messages to particular sockets based on stored session data. Such a setup not only secures the data but also maintains the functionality of broadcasting to appropriate audiences without imposing blanket restrictions that might degrade the user experience.
 
-Below is an example of this approach:
-
-``` typescript  {open=true, lineNos=false, wrap=true}
-import { Server as SocketServer } from 'socket.io';
-import jwt from 'jsonwebtoken';
-
-const io = new SocketServer(httpServer);
-const authenticatedSockets = new Map();
-
-io.use((socket, next) => {
-  const token = socket.handshake.query.token;
-  jwt.verify(token, 'your_secret_key', (err, decoded) => {
-    if (err) {
-      return next(new Error('Authentication error'));
-    }
-    socket.decoded = decoded;
-    authenticatedSockets.set(socket.id, socket);
-    next();
-  });
-});
-
-io.on('connection', (socket) => {
-  socket.on('disconnect', () => {
-    authenticatedSockets.delete(socket.id);
-  });
-
-  // Broadcast to all authenticated users
-  const broadcastToAuthenticatedUsers = () => {
-    authenticatedSockets.forEach((s) => {
-      s.emit('update', { data: 'Update for authenticated users' });
-    });
-  };
-
-  // Broadcast to all connected users
-  const broadcastToAllUsers = () => {
-    io.emit('publicUpdate', { data: 'Public update to all users' });
-  };
-
-  // Example usage
-  broadcastToAuthenticatedUsers(); // Only to authenticated users
-  broadcastToAllUsers(); // To all users
-});
-```
-
 ___
 
 ## Detection
