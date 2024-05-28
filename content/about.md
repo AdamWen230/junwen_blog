@@ -19,11 +19,11 @@ Outside of that, I love traveling and sports, especially in swimming 🏊‍♂�
 ___
 
 ## News 🎙️
+* [05/2024] Start working as a Cyber Security Intern (Threat Detection Response) at [TikTok](https://www.tiktok.com/) in San Jose.
+
 * [01/2024] Start working as a Teaching Assistant 👨‍🏫 at CMU for 18631 - Introduction to Information Security.
 
 * [01/2024] Obtain the eLearning Junior Penetration Tester ([eJPTv2](https://security.ine.com/certifications/ejpt-certification/)) certification.
-
-* [09/2023] Accept an offer from [TikTok](https://www.tiktok.com/) as a Cyber Security Intern (Threat Detection Response) for Summer 2024, in San Jose.
 
 * [06/2023] Obtain the Certified Red Team Professional ([CRTP](https://www.alteredsecurity.com/post/certified-red-team-professional-crtp)) certification.
 
