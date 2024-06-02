@@ -13,7 +13,7 @@ A post to keep track of my workout history.
 
 #### May 2024
 
-![](/images/workout/May-Workout.jpg "May Workout Record (15/25)")
+![](/images/workout/May-Workout.jpg "May Workout Record (21/31)")
 
 #### April 2024
 
