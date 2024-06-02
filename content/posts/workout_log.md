@@ -1,7 +1,7 @@
 +++
 title = 'Workout Log 🔥'
 date = 2024-05-25T18:35:00-07:00
-lastmod = 2024-05-26T15:40:00-07:00
+lastmod = 2024-06-01T15:40:00-07:00
 tags = ['Workout']
 categories = ['Life']
 draft = false
@@ -18,7 +18,3 @@ A post to keep track of my workout history.
 #### April 2024
 
 ![](/images/workout/April-Workout.jpg "April Workout Record (15/30)")
-
-
-
- 
