@@ -12,7 +12,6 @@ summary = "A post to keep track of my workout history."
 A post to keep track of my workout history.
 
 #### June 2024
-hugo server
 ![](/images/workout/June-Workout.jpg "June Workout Record (19/30)")
 
 #### May 2024
