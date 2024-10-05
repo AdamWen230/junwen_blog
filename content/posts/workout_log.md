@@ -11,6 +11,15 @@ summary = "A post to keep track of my workout history."
 
 A post to keep track of my workout history.
 
+#### September 2024
+![](/images/workout/September-Workout.jpeg "September Workout Record (16/30)")
+
+#### August 2024
+![](/images/workout/August-Workout.jpeg "August Workout Record (7/31)")
+
+#### July 2024
+![](/images/workout/July-Workout.jpg "July Workout Record (9/31)")
+
 #### June 2024
 ![](/images/workout/June-Workout.jpg "June Workout Record (19/30)")
 
