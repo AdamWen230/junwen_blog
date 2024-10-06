@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Thoughts - Tag - Jun Wen&#39;s Blog</title>
+        <link>http://localhost:1313/tags/thoughts/</link>
+        <description>Thoughts - Tag - Jun Wen&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 06 Aug 2024 22:57:10 -0400</lastBuildDate><atom:link href="http://localhost:1313/tags/thoughts/" rel="self" type="application/rss+xml" /><item>
+    <title>Vegas Thoughts</title>
+    <link>http://localhost:1313/posts/las_vegas_diary/</link>
+    <pubDate>Tue, 06 Aug 2024 22:57:10 -0400</pubDate><author>
+        <name>Jun Wen</name>
+    </author><guid>http://localhost:1313/posts/las_vegas_diary/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/vegas/0.jpg" referrerpolicy="no-referrer">
+            </div>In the summer of 2021, I stayed on campus to prepare for studying abroad and various competition projects.]]></description>
+</item></channel>
+</rss>

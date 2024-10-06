@@ -1,11 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on Jun Wen&#39;s Blog</title>
-    <link>http://localhost:50351/categories/</link>
-    <description>Recent content in Categories on Jun Wen&#39;s Blog</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <atom:link href="http://localhost:50351/categories/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - Jun Wen&#39;s Blog</title>
+        <link>http://localhost:1313/categories/</link>
+        <description>Categories - Category - Jun Wen&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 06 Aug 2024 22:57:10 -0400</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Life</title>
+    <link>http://localhost:1313/categories/life/</link>
+    <pubDate>Tue, 06 Aug 2024 22:57:10 -0400</pubDate><author>
+        <name>Author</name>
+    </author><guid>http://localhost:1313/categories/life/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>InfoSec</title>
+    <link>http://localhost:1313/categories/infosec/</link>
+    <pubDate>Wed, 01 May 2024 10:57:10 -0400</pubDate><author>
+        <name>Author</name>
+    </author><guid>http://localhost:1313/categories/infosec/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
 </rss>
