@@ -19,6 +19,9 @@ Outside of that, I love traveling and sports, especially in swimming 🏊‍♂�
 ___
 
 ## News 🎙️
+
+* [11/2024] Obtain the OffSec Certified Professional ([OSCP](https://www.offsec.com/courses/pen-200/)) certification.
+
 * [05/2024] Start working as a Cyber Security Intern (Threat Detection Response) at [TikTok](https://www.tiktok.com/) in San Jose.
 
 * [01/2024] Start working as a Teaching Assistant 👨‍🏫 at CMU for 18631 - Introduction to Information Security.
@@ -43,6 +46,12 @@ ___
 ___
 
 ## Experience ⌨️
+
+##### [TikTok](https://www.tiktok.com)
+- **Position:** Cyber Security Intern (Threat Detection Response)
+- **Location:** San Jose, CA
+- **Work:** Detection Engineering, SOAR, Incident Response 
+- **Date:** 05/2024 - 08/2024
 
 ##### [HUAWEI](https://www.huawei.com/en/)
 - **Position:** Cyber Security Engineer Intern
@@ -84,4 +93,4 @@ ___
   * Starting Shooting Guard
 
 ## A Photo of Me 📸
-![Cool Guy](/images/junwen.jpg "Captured at Tuna Harbor Park in San Diego, CA, 2019")
+![Cool Guy](/images/selfie/junwen.jpeg "Captured at Grand Canyon Village, AZ, 2024")
