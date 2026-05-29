@@ -4,7 +4,7 @@ date = 2024-05-25T18:35:00-07:00
 lastmod = 2024-06-01T15:40:00-07:00
 tags = ['Workout']
 categories = ['Life']
-draft = false
+draft = true
 author = 'Jun Wen'
 summary = "A post to keep track of my workout history."
 +++

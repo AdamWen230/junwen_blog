@@ -18,6 +18,8 @@ ___
 
 ## News 🎙️
 
+* [11/2025] Obtain the OffSec Web Expert ([OSWE](https://www.offsec.com/courses/web-300/)) certification.
+
 * [02/2025] Start working as an Information Security Analyst at [TikTok](https://www.tiktok.com/) in San Jose, CA.
 
 * [12/2024] Obtain my master's degree at CMU.
@@ -63,12 +65,6 @@ ___
 - **Work:** DevSecOps, Secure SDLC, Application Security
 - **Date:** 10/2022 - 01/2023
 
-##### [ByteDance](https://www.bytedance.com/en/)
-- **Position:** Security Development Engineer Intern
-- **Location:** Beijing, China
-- **Work:** Machine Learning for Data Security
-- **Date:** 03/2022 - 06/2022
-
 ___
 
 ## Activity 👀
@@ -90,6 +86,3 @@ ___
   * Joint Team of the School of Computer Science, Software Engineering, and Cyber Security 
   * Starting Shooting Guard
 
-## A Photo of Me 📸
-
-![Cool Guy](/images/selfie/junwen3.jpg "Captured at Maan Coffee (My favorite coffee shop), Beijing, China, 2025")

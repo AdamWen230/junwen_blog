@@ -1,32 +1,7 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>All Posts - Jun Wen&#39;s Blog</title>
-        <link>http://localhost:1313/posts/</link>
-        <description>All Posts | Jun Wen&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 06 Aug 2024 22:57:10 -0400</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>Vegas Thoughts</title>
-    <link>http://localhost:1313/posts/las_vegas_diary/</link>
-    <pubDate>Tue, 06 Aug 2024 22:57:10 -0400</pubDate><author>
-        <name>Jun Wen</name>
-    </author><guid>http://localhost:1313/posts/las_vegas_diary/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/vegas/0.jpg" referrerpolicy="no-referrer">
-            </div>In the summer of 2021, I stayed on campus to prepare for studying abroad and various competition projects.]]></description>
-</item><item>
-    <title>Workout Log 🔥</title>
-    <link>http://localhost:1313/posts/workout_log/</link>
-    <pubDate>Sat, 25 May 2024 18:35:00 -0700</pubDate><author>
-        <name>Jun Wen</name>
-    </author><guid>http://localhost:1313/posts/workout_log/</guid>
-    <description><![CDATA[A post to keep track of my workout history.]]></description>
-</item><item>
-    <title>Bleeding WebSockets: Unveiling a Broken Access Control Example Happening on Me</title>
-    <link>http://localhost:1313/posts/websocket_broken_access_control/</link>
-    <pubDate>Wed, 01 May 2024 10:57:10 -0400</pubDate><author>
-        <name>Jun Wen</name>
-    </author><guid>http://localhost:1313/posts/websocket_broken_access_control/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/websocket/attacker-view.jpg" referrerpolicy="no-referrer">
-            </div>I am taking 18351: Full-Stack Software Development for Engineers, offered by Prof. Hakan Erdogmus this semester. The course project involves developing a web application named YACA (Yet Another Chat App). This application allows users to register, login, manage a friend list, invite other friends, and engage in group chats.]]></description>
-</item></channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>All Posts - Jun Wen's Blog</title><link>https://junwen7.com/posts/</link><description>All Posts | Jun Wen's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 27 May 2026 00:00:00 -0700</lastBuildDate><atom:link href="https://junwen7.com/posts/" rel="self" type="application/rss+xml"/><item><title>AI Agents in EDR Telemetry: Coverage and Blind Spots</title><link>https://junwen7.com/posts/ai_agents_edr_telemetry/</link><pubDate>Wed, 27 May 2026 00:00:00 -0700</pubDate><author><name>Jun Wen</name></author><guid>https://junwen7.com/posts/ai_agents_edr_telemetry/</guid><description>&lt;div class="featured-image">
+&lt;img src="/images/ai_edr/cover.png" referrerpolicy="no-referrer">
+&lt;/div>AI coding agents run with broad system privileges and generate a stream of EDR telemetry that is hard to interpret. This post maps each agent tool call to its host-level footprint — process, file, and network — across Claude Code and OpenCode, and explains where EDR visibility holds up and where it breaks down.</description></item><item><title>Vegas Thoughts</title><link>https://junwen7.com/posts/las_vegas_diary/</link><pubDate>Tue, 06 Aug 2024 22:57:10 -0400</pubDate><author><name>Jun Wen</name></author><guid>https://junwen7.com/posts/las_vegas_diary/</guid><description>&lt;div class="featured-image">
+&lt;img src="/images/vegas/0.jpg" referrerpolicy="no-referrer">
+&lt;/div>In the summer of 2021, I stayed on campus to prepare for studying abroad and various competition projects.</description></item><item><title>Bleeding WebSockets: Unveiling a Broken Access Control Example Happening on Me</title><link>https://junwen7.com/posts/websocket_broken_access_control/</link><pubDate>Wed, 01 May 2024 10:57:10 -0400</pubDate><author><name>Jun Wen</name></author><guid>https://junwen7.com/posts/websocket_broken_access_control/</guid><description>&lt;div class="featured-image">
+&lt;img src="/images/websocket/attacker-view.jpg" referrerpolicy="no-referrer">
+&lt;/div>I am taking 18351: Full-Stack Software Development for Engineers, offered by Prof. Hakan Erdogmus this semester. The course project involves developing a web application named YACA (Yet Another Chat App). This application allows users to register, login, manage a friend list, invite other friends, and engage in group chats.</description></item></channel></rss>

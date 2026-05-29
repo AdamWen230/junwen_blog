@@ -160,8 +160,7 @@ theme = "DoIt"
         </head>
         <body>
             <div class="profile">
-                <h1>Jun Wen's Blog</h1>
-                <h2>InfoSec and Life</h2></div>
+                <h1>Jun Wen's Blog</h1></div>
         </body>
         </html>
       """
@@ -184,7 +183,7 @@ theme = "DoIt"
 
 # Social config about the author
   [params.social]
-    GitHub = "https://github.com/AdamWen230"
+    GitHub = ""
     Linkedin = "https://www.linkedin.com/in/junwen7/"
     Twitter = ""
     Instagram = ""
@@ -298,7 +297,17 @@ theme = "DoIt"
     weight = 4
 
 # Markup related configuration in Hugo
+[params.page.toc]
+  enable = true
+  keepStatic = false
+  auto = true
+
+[params.page.code]
+  maxShownLines = 100
+
 [markup]
+  [markup.goldmark.renderer]
+    unsafe = true
   # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
   [markup.highlight]
     # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
