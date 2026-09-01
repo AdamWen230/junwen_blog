@@ -12,3 +12,15 @@ figcaption p {
   font-style: italic;
   line-height: 1.4;
 }
+
+// ==============================
+// Diff code blocks
+// ==============================
+// The light syntax theme (catppuccin-latte) paints a grey background behind
+// inserted/deleted diff lines; the dark theme (onedark) does not. That makes
+// diff blocks look shadowed in light mode only. Drop the background so both
+// themes rely on the text colour alone.
+.chroma .gi,
+.chroma .gd {
+  background-color: transparent;
+}

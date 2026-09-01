@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 570" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="x_ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9" fill="none" stroke="#a8a49c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- ============ staging row ============ -->
+  <!-- ① decoy -->
+  <rect x="40" y="24" width="426" height="320" rx="12" fill="#f4f2ec" stroke="#c8c3b6" stroke-width="1.6"/>
+  <text x="64" y="60" font-size="20" font-weight="600" fill="#4f4c44">① Publish a decoy</text>
+  <text x="64" y="84" font-size="15" fill="#8d8981" font-style="italic">Mar 30, 05:57 UTC</text>
+  <text x="64" y="126" font-size="18" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">plain-crypto-js@4.2.0</text>
+  <text x="64" y="168" font-size="16.5" fill="#5a5648">
+    <tspan x="64" dy="0">· a clean copy of the real crypto-js</tspan>
+    <tspan x="64" dy="30">· no postinstall hook</tspan>
+    <tspan x="64" dy="30">· nothing malicious in it at all</tspan>
+  </text>
+  <rect x="64" y="270" width="378" height="52" rx="8" fill="#e6e3db"/>
+  <text x="84" y="302" font-size="16" fill="#5a5648" font-style="italic">its only job is to acquire a history</text>
+
+  <path d="M466,184 L502,184" fill="none" stroke="#a8a49c" stroke-width="2.1" marker-end="url(#x_ar)"/>
+  <text x="484" y="168" text-anchor="middle" font-size="14.5" fill="#c0492b" font-style="italic">18 h</text>
+
+  <!-- ② arm -->
+  <rect x="506" y="24" width="426" height="320" rx="12" fill="#fef7f5" stroke="#e8a798" stroke-width="1.8"/>
+  <text x="530" y="60" font-size="20" font-weight="600" fill="#c0492b">② Arm it</text>
+  <text x="530" y="84" font-size="15" fill="#bd7259" font-style="italic">Mar 30, 23:59 UTC</text>
+  <text x="530" y="126" font-size="18" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#c0492b">plain-crypto-js@4.2.1</text>
+
+  <text x="530" y="164" font-size="15.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">plain-crypto-js/</text>
+  <text x="530" y="192" font-size="15.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">├─ aes.js, core.js …</text>
+  <text x="562" y="216" font-size="14" fill="#8d8981" font-style="italic">56 files, unchanged</text>
+  <text x="530" y="244" font-size="15.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">├─ package.json</text>
+  <text x="562" y="270" font-size="14.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#c0492b">+ "postinstall": "node setup.js"</text>
+  <text x="530" y="298" font-size="15.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#c0492b" font-weight="600">├─ setup.js</text>
+  <text x="672" y="298" font-size="14.5" fill="#c0492b">← the RAT dropper</text>
+  <text x="530" y="326" font-size="15.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">└─ package.md</text>
+  <text x="672" y="326" font-size="14.5" fill="#8d8981">← a clean stub</text>
+
+  <path d="M932,184 L968,184" fill="none" stroke="#a8a49c" stroke-width="2.1" marker-end="url(#x_ar)"/>
+
+  <!-- ③ point at axios -->
+  <rect x="972" y="24" width="426" height="320" rx="12" fill="#fdf0d5" stroke="#e5c377" stroke-width="1.8"/>
+  <text x="996" y="60" font-size="20" font-weight="600" fill="#8a6414">③ Point it at axios</text>
+  <text x="996" y="84" font-size="15" fill="#a67a1e" font-style="italic">Mar 31, 00:21 UTC</text>
+  <text x="996" y="126" font-size="18" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#8a6414">axios@1.14.1</text>
+  <text x="996" y="168" font-size="16.5" fill="#5a5648">
+    <tspan x="996" dy="0">all 85 source files are</tspan>
+    <tspan x="996" dy="28">bit-for-bit identical</tspan>
+  </text>
+  <text x="996" y="242" font-size="16.5" fill="#5a5648">package.json gains one line:</text>
+  <rect x="996" y="258" width="378" height="46" rx="8" fill="#fbe9c5"/>
+  <text x="1016" y="288" font-size="15.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#8a6414">+ "plain-crypto-js": "^4.2.1"</text>
+  <text x="996" y="330" font-size="15" fill="#a67a1e" font-style="italic">never imported anywhere in axios</text>
+
+  <!-- ============ install-time flow ============ -->
+  <text x="40" y="400" font-size="19" font-weight="600" fill="#4f4c44">④ What then happens on a machine that simply runs the install</text>
+  <line x1="40" y1="418" x2="1398" y2="418" stroke="#b5b1a8" stroke-width="1.1"/>
+
+  <rect x="40" y="448" width="250" height="90" rx="11" fill="#eceae1" stroke="#b8b4a4" stroke-width="1.6"/>
+  <text x="165" y="486" text-anchor="middle" font-size="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">npm install axios</text>
+  <text x="165" y="512" text-anchor="middle" font-size="15" fill="#8d8981">resolves the dep tree</text>
+  <path d="M290,493 L322,493" fill="none" stroke="#a8a49c" stroke-width="2.1" marker-end="url(#x_ar)"/>
+
+  <rect x="326" y="448" width="290" height="90" rx="11" fill="#fef7f5" stroke="#e8a798" stroke-width="1.6"/>
+  <text x="471" y="482" text-anchor="middle" font-size="16" fill="#c0492b">plain-crypto-js pulled in</text>
+  <text x="471" y="508" text-anchor="middle" font-size="15" fill="#bd7259">automatically, as a dependency</text>
+  <path d="M616,493 L648,493" fill="none" stroke="#a8a49c" stroke-width="2.1" marker-end="url(#x_ar)"/>
+
+  <rect x="652" y="448" width="250" height="90" rx="11" fill="#fce8e3" stroke="#e8a798" stroke-width="2.4"/>
+  <text x="777" y="486" text-anchor="middle" font-size="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#c0492b">postinstall fires</text>
+  <text x="777" y="512" text-anchor="middle" font-size="15" fill="#bd7259">node setup.js</text>
+  <path d="M902,493 L934,493" fill="none" stroke="#a8a49c" stroke-width="2.1" marker-end="url(#x_ar)"/>
+
+  <rect x="938" y="448" width="460" height="90" rx="11" fill="#fce8e3" stroke="#e8a798" stroke-width="1.6"/>
+  <text x="1168" y="482" text-anchor="middle" font-size="16" fill="#c0492b">the RAT contacts its C2, then deletes itself</text>
+  <text x="1168" y="508" text-anchor="middle" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#bd7259">sfrclak.com:8000</text>
+</svg>

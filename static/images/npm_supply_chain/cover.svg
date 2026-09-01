@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+
+  <rect width="1200" height="630" fill="#fbfaf7"/>
+
+  <!-- left accent bar -->
+  <rect x="96" y="178" width="7" height="240" rx="3.5" fill="#c0492b"/>
+
+  <!-- title -->
+  <text x="140" y="240" font-size="66" font-weight="700" fill="#2f2c26">NPM Supply Chain</text>
+  <text x="140" y="312" font-size="66" font-weight="700" fill="#2f2c26">Attacks</text>
+  <text x="140" y="380" font-size="46" font-weight="400" fill="#c0492b">Through a SOC Lens</text>
+
+  <!-- rule -->
+  <rect x="140" y="440" width="86" height="4" rx="2" fill="#d8d3c8"/>
+
+  <!-- topics -->
+  <text x="140" y="492" font-size="26" fill="#6f6a60">Blast Radius&#160;&#160;·&#160;&#160;TTPs&#160;&#160;·&#160;&#160;Detection</text>
+
+  <!-- decorative: install-hook motif, right side -->
+  <g opacity="0.5">
+    <rect x="760" y="214" width="330" height="52" rx="10" fill="#eceae1" stroke="#c9c4b6" stroke-width="1.6"/>
+    <text x="784" y="247" font-size="21" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#5a5648">npm install</text>
+
+    <path d="M925,266 L925,308" stroke="#b3aea2" stroke-width="2" stroke-dasharray="5 5"/>
+    <path d="M919,300 L925,309 L931,300" fill="none" stroke="#b3aea2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="760" y="312" width="330" height="52" rx="10" fill="#fce8e3" stroke="#e0a292" stroke-width="1.8"/>
+    <text x="784" y="345" font-size="21" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#c0492b">preinstall hook</text>
+
+    <path d="M925,364 L925,406" stroke="#d9694a" stroke-width="2" stroke-dasharray="5 5"/>
+    <path d="M919,398 L925,407 L931,398" fill="none" stroke="#d9694a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="760" y="410" width="330" height="52" rx="10" fill="#fce8e3" stroke="#e0a292" stroke-width="1.8"/>
+    <text x="784" y="443" font-size="21" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#c0492b">payload runs</text>
+  </g>
+</svg>

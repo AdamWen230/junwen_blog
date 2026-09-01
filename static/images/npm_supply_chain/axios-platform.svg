@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 650" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a_ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9" fill="none" stroke="#a8a49c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- trigger -->
+  <rect x="500" y="20" width="440" height="70" rx="11" fill="#eceae1" stroke="#b8b4a4" stroke-width="1.6"/>
+  <text x="720" y="49" text-anchor="middle" font-size="19" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">postinstall → node setup.js</text>
+  <text x="720" y="75" text-anchor="middle" font-size="15" fill="#8d8981">inside plain-crypto-js, not inside axios</text>
+  <path d="M720,90 L720,114" fill="none" stroke="#a8a49c" stroke-width="1.9" marker-end="url(#a_ar)"/>
+
+  <!-- C2 -->
+  <rect x="500" y="118" width="440" height="70" rx="11" fill="#fce8e3" stroke="#e8a798" stroke-width="1.8"/>
+  <text x="720" y="146" text-anchor="middle" font-size="16" fill="#c0492b">decodes its C2 URL (two-layer XOR + base64)</text>
+  <text x="720" y="172" text-anchor="middle" font-size="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#c0492b">http://sfrclak.com:8000/6202033</text>
+  <path d="M720,188 L720,212" fill="none" stroke="#a8a49c" stroke-width="1.9" marker-end="url(#a_ar)"/>
+
+  <!-- platform switch -->
+  <rect x="586" y="216" width="268" height="56" rx="28" fill="#e8e4f7" stroke="#a99cd8" stroke-width="1.8"/>
+  <text x="720" y="252" text-anchor="middle" font-size="19" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#5b4a9e">os.platform()</text>
+
+  <!-- branch lines -->
+  <path d="M636,272 C636,304 250,300 250,332" fill="none" stroke="#a8a49c" stroke-width="1.8" marker-end="url(#a_ar)"/>
+  <path d="M720,272 L720,332" fill="none" stroke="#a8a49c" stroke-width="1.8" marker-end="url(#a_ar)"/>
+  <path d="M804,272 C804,304 1190,300 1190,332" fill="none" stroke="#a8a49c" stroke-width="1.8" marker-end="url(#a_ar)"/>
+  <text x="424" y="296" text-anchor="middle" font-size="15" fill="#8d8981" font-style="italic">darwin</text>
+  <text x="746" y="296" font-size="15" fill="#8d8981" font-style="italic">win32</text>
+  <text x="1016" y="296" text-anchor="middle" font-size="15" fill="#8d8981" font-style="italic">linux</text>
+
+  <!-- macOS column -->
+  <rect x="40" y="336" width="420" height="290" rx="12" fill="#f6fafd" stroke="#8fb8dd" stroke-width="1.8"/>
+  <text x="62" y="372" font-size="20" font-weight="600" fill="#2c5f8d">macOS</text>
+  <text x="62" y="406" font-size="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">
+    <tspan x="62" dy="0">write AppleScript → /tmp</tspan>
+    <tspan x="62" dy="28">nohup osascript &amp; (background)</tspan>
+    <tspan x="62" dy="28">curl POST → sfrclak.com:8000</tspan>
+    <tspan x="78" dy="26" font-size="14.5" fill="#8d8981">body: packages.npm.org/product0</tspan>
+    <tspan x="62" dy="28">download → /Library/Caches/</tspan>
+    <tspan x="78" dy="26">com.apple.act.mond</tspan>
+    <tspan x="62" dy="28">chmod 770</tspan>
+  </text>
+  <rect x="62" y="576" width="376" height="36" rx="8" fill="#dce9f7"/>
+  <text x="80" y="601" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#2c5f8d">exec via /bin/zsh &amp; — detached</text>
+
+  <!-- Windows column -->
+  <rect x="510" y="336" width="420" height="290" rx="12" fill="#fdfaf2" stroke="#e5c377" stroke-width="1.8"/>
+  <text x="532" y="372" font-size="20" font-weight="600" fill="#8a6414">Windows</text>
+  <text x="532" y="406" font-size="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">
+    <tspan x="532" dy="0">where powershell</tspan>
+    <tspan x="532" dy="28">copy → %PROGRAMDATA%\wt.exe</tspan>
+    <tspan x="548" dy="26" font-size="14.5" fill="#8d8981">a renamed PowerShell</tspan>
+    <tspan x="532" dy="28">write VBScript → %TEMP%\*.vbs</tspan>
+    <tspan x="532" dy="28">cscript //nologo</tspan>
+    <tspan x="532" dy="28">curl POST → C2, body product1</tspan>
+  </text>
+  <rect x="532" y="576" width="376" height="36" rx="8" fill="#fdf0d5"/>
+  <text x="550" y="601" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#8a6414">powershell -w hidden -ep bypass</text>
+
+  <!-- Linux column -->
+  <rect x="980" y="336" width="420" height="290" rx="12" fill="#fef7f5" stroke="#e8a798" stroke-width="1.8"/>
+  <text x="1002" y="372" font-size="20" font-weight="600" fill="#c0492b">Linux</text>
+  <text x="1002" y="406" font-size="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">
+    <tspan x="1002" dy="0">curl POST → C2, body product2</tspan>
+    <tspan x="1002" dy="28">→ /tmp/ld.py</tspan>
+  </text>
+  <text x="1002" y="500" font-size="15" fill="#8d8981" font-style="italic">
+    <tspan x="1002" dy="0">the shortest path of the three —</tspan>
+    <tspan x="1002" dy="26">no staging, no renaming, and no</tspan>
+    <tspan x="1002" dy="26">script-host gymnastics</tspan>
+  </text>
+  <rect x="1002" y="576" width="376" height="36" rx="8" fill="#fce8e3"/>
+  <text x="1020" y="601" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#c0492b">nohup python3 /tmp/ld.py &amp;</text>
+</svg>

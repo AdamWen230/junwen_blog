@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 552" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="p_ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9" fill="none" stroke="#a8a49c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="p_arD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9" fill="none" stroke="#c0492b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- ① Victim 1 -->
+  <rect x="40" y="24" width="314" height="150" rx="12" fill="#fdf0d5" stroke="#e5c377" stroke-width="1.8"/>
+  <text x="64" y="60" font-size="20" font-weight="600" fill="#8a6414">① Victim 1</text>
+  <text x="64" y="94" font-size="16.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">npm install keyv@6.0.0</text>
+  <text x="64" y="120" font-size="16.5" fill="#a67a1e">preinstall fires → stage 2 runs</text>
+  <text x="64" y="146" font-size="15" fill="#a67a1e" font-style="italic">on a laptop, or on a CI runner</text>
+
+  <path d="M354,99 L378,99" fill="none" stroke="#a8a49c" stroke-width="2.1" marker-end="url(#p_ar)"/>
+
+  <!-- ② Harvest -->
+  <rect x="386" y="24" width="314" height="150" rx="12" fill="#fce8e3" stroke="#e8a798" stroke-width="1.8"/>
+  <text x="410" y="60" font-size="20" font-weight="600" fill="#c0492b">② Harvest</text>
+  <text x="410" y="94" font-size="16.5" fill="#4f4c44">npm token · GitHub token</text>
+  <text x="410" y="120" font-size="16.5" fill="#4f4c44">AWS keys · SSH keys · CI secrets</text>
+  <text x="410" y="146" font-size="15" fill="#bd7259" font-style="italic">the npm token is what closes the loop</text>
+
+  <path d="M700,99 L724,99" fill="none" stroke="#a8a49c" stroke-width="2.1" marker-end="url(#p_ar)"/>
+
+  <!-- ③ Republish -->
+  <rect x="732" y="24" width="314" height="150" rx="12" fill="#fdf0d5" stroke="#e5c377" stroke-width="1.8"/>
+  <text x="756" y="60" font-size="20" font-weight="600" fill="#8a6414">③ Republish</text>
+  <text x="756" y="94" font-size="16.5" fill="#4f4c44">inject the payload into every</text>
+  <text x="756" y="120" font-size="16.5" fill="#4f4c44">package the victim can publish</text>
+  <text x="756" y="146" font-size="15" fill="#a67a1e" font-style="italic">repacked, rehashed, re-signed</text>
+
+  <path d="M1046,99 L1070,99" fill="none" stroke="#a8a49c" stroke-width="2.1" marker-end="url(#p_ar)"/>
+
+  <!-- ④ Victim 2 -->
+  <rect x="1078" y="24" width="314" height="150" rx="12" fill="#dce9f7" stroke="#8fb8dd" stroke-width="1.8"/>
+  <text x="1102" y="60" font-size="20" font-weight="600" fill="#2c5f8d">④ Victim 2</text>
+  <text x="1102" y="94" font-size="16.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">npm install &lt;their-pkg&gt;</text>
+  <text x="1102" y="120" font-size="16.5" fill="#57799c">a package they already trusted</text>
+  <text x="1102" y="146" font-size="15" fill="#57799c" font-style="italic">the loop starts again</text>
+
+  <!-- feedback loop -->
+  <path d="M1235,174 L1235,216 L197,216 L197,174" fill="none" stroke="#c0492b" stroke-width="1.9" stroke-dasharray="7 6" marker-end="url(#p_arD)"/>
+  <rect x="530" y="200" width="380" height="32" rx="6" fill="#fef7f5"/>
+  <text x="720" y="223" text-anchor="middle" font-size="16" fill="#c0492b" font-style="italic">repeats with Victim 2's credentials</text>
+
+  <!-- ============ publishing engine detail ============ -->
+  <text x="40" y="292" font-size="18.5" font-weight="600" fill="#4f4c44">Step ③ in detail — the worm ships its own NPM publishing engine</text>
+  <line x1="40" y1="308" x2="1392" y2="308" stroke="#b5b1a8" stroke-width="1.1"/>
+
+  <!-- left column -->
+  <text x="40" y="348" font-size="16.5" font-weight="700" fill="#c0492b">1</text>
+  <text x="76" y="348" font-size="16.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">/-/whoami</text>
+  <text x="76" y="372" font-size="15.5" fill="#8d8981">identify which NPM account the stolen token belongs to</text>
+
+  <text x="40" y="418" font-size="16.5" font-weight="700" fill="#c0492b">2</text>
+  <text x="76" y="418" font-size="16.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">/-/v1/search?text=maintainer:&lt;user&gt;</text>
+  <text x="76" y="442" font-size="15.5" fill="#8d8981">enumerate every package that account is allowed to publish</text>
+
+  <text x="40" y="488" font-size="16.5" font-weight="700" fill="#c0492b">3</text>
+  <text x="76" y="488" font-size="16.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">GET /:pkg/-/:pkg-:ver.tgz</text>
+  <text x="76" y="512" font-size="15.5" fill="#8d8981">download the current, legitimate tarball for each one</text>
+
+  <!-- right column -->
+  <text x="740" y="348" font-size="16.5" font-weight="700" fill="#c0492b">4</text>
+  <text x="776" y="348" font-size="16.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">inject scripts.preinstall + payload</text>
+  <text x="776" y="372" font-size="15.5" fill="#8d8981">unpack the archive, add the hook and the worm, repack it</text>
+
+  <text x="740" y="418" font-size="16.5" font-weight="700" fill="#c0492b">5</text>
+  <text x="776" y="418" font-size="16.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">recompute sha512 + sha1</text>
+  <text x="776" y="442" font-size="15.5" fill="#8d8981">update the integrity fields so NPM accepts the tarball</text>
+
+  <text x="740" y="488" font-size="16.5" font-weight="700" fill="#c0492b">6</text>
+  <text x="776" y="488" font-size="16.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">PUT to registry + self-sign</text>
+  <text x="776" y="512" font-size="15.5" fill="#8d8981">publish with auto-generated Sigstore / SLSA provenance</text>
+</svg>

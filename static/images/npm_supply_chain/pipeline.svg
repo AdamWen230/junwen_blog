@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 710" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9" fill="none" stroke="#a8a49c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9" fill="none" stroke="#d9694a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- transparent background: adapts to light / dark site theme -->
+
+  <!-- ============ npm registry ============ -->
+  <rect x="457" y="24" width="246" height="64" rx="12" fill="#fdf0d5" stroke="#e5c377" stroke-width="1.6"/>
+  <text x="580" y="63" text-anchor="middle" font-size="22" fill="#a67a1e">npm registry</text>
+
+  <!-- registry -> CI / BUILD -->
+  <path d="M520,88 C520,118 441,120 441,146" fill="none" stroke="#d9694a" stroke-width="1.8" stroke-dasharray="6 5" marker-end="url(#arR)"/>
+  <path d="M640,88 C640,118 719,120 719,146" fill="none" stroke="#d9694a" stroke-width="1.8" stroke-dasharray="6 5" marker-end="url(#arR)"/>
+  <text x="350" y="128" text-anchor="middle" font-size="14.5" fill="#d9694a" font-style="italic">install hooks fire</text>
+  <text x="830" y="128" text-anchor="middle" font-size="14.5" fill="#d9694a" font-style="italic">install hooks fire</text>
+
+  <!-- ============ stage boxes ============ -->
+  <rect x="40" y="150" width="246" height="94" rx="12" fill="#eceae1" stroke="#b8b4a4" stroke-width="1.6"/>
+  <text x="163" y="187" text-anchor="middle" font-size="22" fill="#5a5648">Git repo</text>
+  <text x="163" y="213" text-anchor="middle" font-size="15" fill="#807b6e">source + package.json</text>
+
+  <rect x="318" y="150" width="246" height="94" rx="12" fill="#fce8e3" stroke="#e8a798" stroke-width="2.6"/>
+  <text x="441" y="187" text-anchor="middle" font-size="22" fill="#c0492b">CI runner</text>
+  <text x="441" y="213" text-anchor="middle" font-size="15" fill="#bd7259">lint + test on push / MR</text>
+
+  <rect x="596" y="150" width="246" height="94" rx="12" fill="#fce8e3" stroke="#e8a798" stroke-width="2.6"/>
+  <text x="719" y="187" text-anchor="middle" font-size="22" fill="#c0492b">Build server</text>
+  <text x="719" y="213" text-anchor="middle" font-size="15" fill="#bd7259">compiles the artifact</text>
+
+  <rect x="874" y="150" width="246" height="94" rx="12" fill="#dce9f7" stroke="#8fb8dd" stroke-width="1.6"/>
+  <text x="997" y="187" text-anchor="middle" font-size="22" fill="#2c5f8d">Artifact store</text>
+  <text x="997" y="213" text-anchor="middle" font-size="15" fill="#57799c">bundled output</text>
+
+  <rect x="1152" y="150" width="246" height="94" rx="12" fill="#e8e4f7" stroke="#a99cd8" stroke-width="1.6"/>
+  <text x="1275" y="187" text-anchor="middle" font-size="22" fill="#5b4a9e">Runtime</text>
+  <text x="1275" y="213" text-anchor="middle" font-size="15" fill="#7b6fae">starts the service</text>
+
+  <!-- stage arrows -->
+  <path d="M286,197 L312,197" fill="none" stroke="#a8a49c" stroke-width="1.9" marker-end="url(#ar)"/>
+  <path d="M564,197 L590,197" fill="none" stroke="#a8a49c" stroke-width="1.9" marker-end="url(#ar)"/>
+  <path d="M842,197 L868,197" fill="none" stroke="#a8a49c" stroke-width="1.9" marker-end="url(#ar)"/>
+  <path d="M1120,197 L1146,197" fill="none" stroke="#a8a49c" stroke-width="1.9" marker-end="url(#ar)"/>
+
+  <!-- ============ build boundary ============ -->
+  <line x1="858" y1="266" x2="858" y2="556" stroke="#a8a49c" stroke-width="1.4" stroke-dasharray="7 6"/>
+  <text x="848" y="286" text-anchor="end" font-size="14.5" fill="#8d8981" font-style="italic">npm install runs</text>
+  <text x="868" y="286" text-anchor="start" font-size="14.5" fill="#8d8981" font-style="italic">no npm install past here</text>
+
+  <!-- ============ file cards ============ -->
+  <!-- Git repo -->
+  <rect x="40" y="300" width="246" height="248" rx="10" fill="#fafaf8" stroke="#d5d1c8" stroke-width="1.3"/>
+  <text x="60" y="328" font-size="14" fill="#8d8981" font-style="italic">on disk</text>
+  <text x="60" y="358" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">
+    <tspan x="60" dy="0">repo/</tspan>
+    <tspan x="60" dy="24">├─ package.json</tspan>
+    <tspan x="60" dy="24">└─ src/</tspan>
+  </text>
+  <text x="60" y="466" font-size="13.5" fill="#9a968c" font-style="italic">
+    <tspan x="60" dy="0">node_modules is</tspan>
+    <tspan x="60" dy="19">gitignored — nothing</tspan>
+    <tspan x="60" dy="19">malicious is committed</tspan>
+  </text>
+
+  <!-- CI runner -->
+  <rect x="318" y="300" width="246" height="248" rx="10" fill="#fef7f5" stroke="#eec3b6" stroke-width="1.3"/>
+  <text x="338" y="328" font-size="14" fill="#bd7259" font-style="italic">after npm ci</text>
+  <text x="338" y="358" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">
+    <tspan x="338" dy="0">node_modules/</tspan>
+    <tspan x="338" dy="24">└─ poisoned-pkg/</tspan>
+    <tspan x="354" dy="24">├─ package.json</tspan>
+    <tspan x="370" dy="22" font-size="13" fill="#c0492b">└ postinstall ▸</tspan>
+    <tspan x="354" dy="24">├─ index.js</tspan>
+    <tspan x="354" dy="24" fill="#c0492b" font-weight="600">└─ evil.js</tspan>
+  </text>
+  <circle cx="338" cy="516" r="5.5" fill="#c0492b"/>
+  <text x="354" y="521" font-size="14.5" fill="#c0492b" font-weight="600">evil.js EXECUTES</text>
+
+  <!-- Build server -->
+  <rect x="596" y="300" width="246" height="248" rx="10" fill="#fef7f5" stroke="#eec3b6" stroke-width="1.3"/>
+  <text x="616" y="328" font-size="14" fill="#bd7259" font-style="italic">after npm install</text>
+  <text x="616" y="358" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">
+    <tspan x="616" dy="0">node_modules/</tspan>
+    <tspan x="616" dy="24">└─ poisoned-pkg/</tspan>
+    <tspan x="632" dy="24">├─ package.json</tspan>
+    <tspan x="648" dy="22" font-size="13" fill="#c0492b">└ postinstall ▸</tspan>
+    <tspan x="632" dy="24">├─ index.js</tspan>
+    <tspan x="632" dy="24" fill="#c0492b" font-weight="600">└─ evil.js</tspan>
+  </text>
+  <circle cx="616" cy="516" r="5.5" fill="#c0492b"/>
+  <text x="632" y="521" font-size="14.5" fill="#c0492b" font-weight="600">evil.js EXECUTES</text>
+
+  <!-- Artifact store -->
+  <rect x="874" y="300" width="246" height="248" rx="10" fill="#f6fafd" stroke="#bcd5ea" stroke-width="1.3"/>
+  <text x="894" y="328" font-size="14" fill="#57799c" font-style="italic">packed into the bundle</text>
+  <text x="894" y="358" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">
+    <tspan x="894" dy="0">output/dist/</tspan>
+    <tspan x="894" dy="24">└─ node_modules/</tspan>
+    <tspan x="910" dy="24">└─ poisoned-pkg/</tspan>
+    <tspan x="926" dy="24">├─ index.js</tspan>
+    <tspan x="926" dy="24">└─ evil.js</tspan>
+  </text>
+  <circle cx="894" cy="516" r="5.5" fill="none" stroke="#8fb8dd" stroke-width="2"/>
+  <text x="910" y="521" font-size="14.5" fill="#2c5f8d">both files inert</text>
+
+  <!-- Runtime -->
+  <rect x="1152" y="300" width="246" height="248" rx="10" fill="#f8f7fd" stroke="#cbc3e8" stroke-width="1.3"/>
+  <text x="1172" y="328" font-size="14" fill="#7b6fae" font-style="italic">service starts</text>
+  <text x="1172" y="358" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#4f4c44">
+    <tspan x="1172" dy="0">/app/dist/</tspan>
+    <tspan x="1172" dy="24">└─ node_modules/</tspan>
+    <tspan x="1188" dy="24">└─ poisoned-pkg/</tspan>
+    <tspan x="1204" dy="24" fill="#5b4a9e" font-weight="600">├─ index.js</tspan>
+    <tspan x="1220" dy="22" font-size="13" fill="#5b4a9e">via require() ▸</tspan>
+    <tspan x="1204" dy="24">└─ evil.js</tspan>
+  </text>
+  <circle cx="1172" cy="516" r="5.5" fill="#5b4a9e"/>
+  <text x="1188" y="521" font-size="14.5" fill="#5b4a9e" font-weight="600">index.js only</text>
+
+  <!-- ============ legend ============ -->
+  <line x1="40" y1="588" x2="1398" y2="588" stroke="#b5b1a8" stroke-width="1.1"/>
+
+  <circle cx="52" cy="616" r="5.5" fill="#d9694a"/>
+  <text x="70" y="621" font-size="14.5" fill="#8d8981">
+    <tspan x="70" dy="0" font-weight="700" fill="#d9694a">Option B — install hook.</tspan>
+    <tspan x="70" dy="23">Fires on every install, so it lands on the CI runner and the build</tspan>
+    <tspan x="70" dy="21">server, where the CI secrets, registry tokens and signing keys live.</tspan>
+  </text>
+
+  <circle cx="742" cy="616" r="5.5" fill="#7d6dc4"/>
+  <text x="760" y="621" font-size="14.5" fill="#8d8981">
+    <tspan x="760" dy="0" font-weight="700" fill="#7d6dc4">Option A — poisoned source.</tspan>
+    <tspan x="760" dy="23">Stays dormant across the whole pipeline and only executes in the</tspan>
+    <tspan x="760" dy="21">runtime, when the application actually calls the library.</tspan>
+  </text>
+</svg>
