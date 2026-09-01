@@ -297,6 +297,10 @@ theme = "DoIt"
     weight = 4
 
 # Markup related configuration in Hugo
+[params.page]
+  # tap an image to open it full-screen and zoomable
+  lightgallery = true
+
 [params.page.toc]
   enable = true
   keepStatic = false

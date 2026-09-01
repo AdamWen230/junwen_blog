@@ -155,7 +155,7 @@ The first group is every environment where a human types `npm install` and waits
 
 The second group is every machine that runs `npm install` because a pipeline told it to, and this is the part that should change how you scope an incident. We can lay out a typical Node.js release pipeline, then ask at each stage what's on disk and what's actually executing:
 
-{{< figure src="/images/npm_supply_chain/pipeline.svg" alt="A poisoned package through a Node.js release pipeline, showing which stages execute the install hook and what sits on disk at each one." caption="The same poisoned tarball moving through a release pipeline. Only the CI runner and the build server ever run `npm install`, so those are the only two stages where an install hook executes — and both are destroyed when the job finishes." >}}
+![A poisoned package through a Node.js release pipeline, showing which stages execute the install hook and what sits on disk at each one.](/images/npm_supply_chain/pipeline.svg "The same poisoned tarball moving through a release pipeline. Only the CI runner and the build server ever run `npm install`, so those are the only two stages where an install hook executes — and both are destroyed when the job finishes.")
 
 Only two stages in that chain actually run `npm install`: the CI runner and the build server. Neither one is production, which is exactly why they get overlooked — and they're quietly the richest targets you have. By the time the build output reaches the artifact store, `evil.js` is just a file sitting in a bundle, because nothing downstream ever re-runs it, and the runtime never calls `npm install` at all since the dependencies were already resolved and packed at build time.
 
@@ -225,7 +225,7 @@ Two files came along with that hook, and their names were picked as carefully as
 
 `setup.mjs` is more interesting than your average dropper, because instead of pulling a payload from a C2, it goes and fetches a runtime:
 
-{{< figure src="/images/npm_supply_chain/keyv-dropper.svg" alt="Execution flow of the keyv setup.mjs dropper, from the preinstall hook through downloading Bun to executing the stage 2 worm." caption="The dropper's whole job is to obtain a JavaScript runtime that is not `node`, using a download that looks like ordinary GitHub traffic." >}}
+![Execution flow of the keyv setup.mjs dropper, from the preinstall hook through downloading Bun to executing the stage 2 worm.](/images/npm_supply_chain/keyv-dropper.svg "The dropper's whole job is to obtain a JavaScript runtime that is not `node`, using a download that looks like ordinary GitHub traffic.")
 
 Only once Bun is on disk does the real payload, `Math_Symbol.js`, run — and it runs under `bun` rather than `node`. Worth noting now, because it matters a lot for detection later.
 
@@ -237,7 +237,7 @@ The stage 2 payload is a thorough credential collector. It walks known credentia
 
 Among everything harvested, one credential turns a compromise into an outbreak:
 
-{{< figure src="/images/npm_supply_chain/keyv-propagation.svg" alt="The npm token propagation loop: install, harvest credentials, republish every package the victim maintains, and wait for the next victim to install one." caption="The replication loop. One poisoned install yields the credentials needed to poison every package that victim is able to publish." >}}
+![The npm token propagation loop: install, harvest credentials, republish every package the victim maintains, and wait for the next victim to install one.](/images/npm_supply_chain/keyv-propagation.svg "The replication loop. One poisoned install yields the credentials needed to poison every package that victim is able to publish.")
 
 This is the mechanism behind the question I opened with. Those services aren't being singled out over and over — they just sit downstream of maintainers who keep getting caught in the loop, and every new victim widens the wave that follows.
 
@@ -283,13 +283,13 @@ Nothing in axios has ever referenced `plain-crypto-js` — grep the whole source
 
 None of it was improvised, either. The dependency had been built and quietly aged in advance:
 
-{{< figure src="/images/npm_supply_chain/axios-phantom.svg" alt="How the axios phantom dependency was staged: a clean decoy package published first, armed with a postinstall dropper eighteen hours later, then named as a dependency of axios." caption="Eighteen hours of staging, so that by the time axios pointed at it, `plain-crypto-js` already looked like an ordinary package with a publishing history." >}}
+![How the axios phantom dependency was staged: a clean decoy package published first, armed with a postinstall dropper eighteen hours later, then named as a dependency of axios.](/images/npm_supply_chain/axios-phantom.svg "Eighteen hours of staging, so that by the time axios pointed at it, `plain-crypto-js` already looked like an ordinary package with a publishing history.")
 
 #### The payload
 
 `setup.js` decodes its configuration and then splits three ways:
 
-{{< figure src="/images/npm_supply_chain/axios-platform.svg" alt="The axios setup.js dropper branching on os.platform() into distinct macOS, Windows and Linux execution paths." caption="One dropper, three host-specific paths — each one built around whatever living-off-the-land binaries that platform provides." >}}
+![The axios setup.js dropper branching on os.platform() into distinct macOS, Windows and Linux execution paths.](/images/npm_supply_chain/axios-platform.svg "One dropper, three host-specific paths — each one built around whatever living-off-the-land binaries that platform provides.")
 
 Unlike Keyv, this payload is a remote access trojan rather than an information stealer, so there's no credential sweep, no propagation loop and no republishing anywhere in it. The attacker just wanted persistent access to whatever machine happened to run the install.
 
