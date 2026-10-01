@@ -644,3 +644,7 @@ AI coding agents are a new class of process on your endpoints — high-privilege
 - **The missing layer** is intent: EDR records what the agent *did*; it cannot record *why*. That gap is what Sage addresses — by moving detection up to the tool call itself, before execution, where the full context is still available.
 
 The threat landscape for AI agents is still early. Prompt injection and skill poisoning attacks have been demonstrated in controlled settings; large-scale in-the-wild exploitation is not yet common. But the attack surface is real, the tooling for defenders is thin, and the telemetry that exists today is already hard to interpret. Building the muscle now — understanding what EDR captures and where it stops — is the prerequisite for everything that comes after.
+
+---
+
+**Update (09/2026):** I presented this research at BSides Orlando 2026. <a href="/files/bsides-orlando-2026-slides.pdf" download>📄 Download the slides (PDF)</a>

@@ -18,6 +18,8 @@ ___
 
 ## News 🎙️
 
+* [09/2026] Spoke at BSides Orlando 2026: *What Your EDR Sees When an AI Agent Runs — and Where to Look Deeper*. <a href="/files/bsides-orlando-2026-slides.pdf" download>📄 Download slides (PDF)</a>
+
 * [11/2025] Obtain the OffSec Web Expert ([OSWE](https://www.offsec.com/courses/web-300/)) certification.
 
 * [02/2025] Start working as an Information Security Analyst at [TikTok](https://www.tiktok.com/) in San Jose, CA.
