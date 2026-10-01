@@ -18,7 +18,9 @@ ___
 
 ## News 🎙️
 
-* [09/2026] Spoke at BSides Orlando 2026: *What Your EDR Sees When an AI Agent Runs — and Where to Look Deeper*. <a href="/files/bsides-orlando-2026-slides.pdf" download>📄 Download slides (PDF)</a>
+* [09/2026] Presented *What Your EDR Sees When an AI Agent Runs — and Where to Look Deeper* at [BSides Orlando 2026](https://bsidesorlando.org/schedule/). <a href="/files/bsides-orlando-2026-slides.pdf" download>📄 Slides (PDF)</a> · [🎥 Video](https://www.youtube.com/watch?v=sMyI-OxoJ44&t=8730s)
+
+* [09/2026] Join [Instacart](https://www.instacart.com/) as a Senior Security Engineer.
 
 * [11/2025] Obtain the OffSec Web Expert ([OSWE](https://www.offsec.com/courses/web-300/)) certification.
 
